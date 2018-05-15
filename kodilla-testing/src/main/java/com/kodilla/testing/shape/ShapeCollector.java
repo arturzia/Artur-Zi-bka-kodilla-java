@@ -8,6 +8,7 @@ public class ShapeCollector {
 
 
     public ArrayList<Shape> getShapes() {
+
         return shapes;
     }
 
@@ -19,13 +20,11 @@ public class ShapeCollector {
 
     public boolean removeFigure(Shape shape) {
         boolean result = false;
-        if (shapes.contains(shapes)) {
-            shapes.remove(shapes);
+        if (shapes.contains(shape)) {
+            shapes.remove(shape);
             result = true;
         }
         return result;
-
-
     }
 
     public Shape getFigure(int n) {
@@ -38,7 +37,10 @@ public class ShapeCollector {
         return null;
     }
 
-    public void showFigures() {
+    public void showFigures(Shape shape) {
+
+            System.out.println("Shape: "+shape.getShapeName());
+            System.out.println("Shapes field: "+shape.getField());
     }
 
 }

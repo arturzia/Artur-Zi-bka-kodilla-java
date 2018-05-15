@@ -47,8 +47,7 @@ public class ShapeCollectorTestSuite {
         boolean result = shapeCollector.removeFigure(circle);
 
         //Then
-        Assert.assertFalse(result);
-
+        Assert.assertEquals(0, shapeCollector.getShapes().size());
     }
 
     @Test
@@ -68,10 +67,5 @@ public class ShapeCollectorTestSuite {
 
         //Then
         Assert.assertEquals(triangle, result);
-
-
     }
-
-
-
 }
