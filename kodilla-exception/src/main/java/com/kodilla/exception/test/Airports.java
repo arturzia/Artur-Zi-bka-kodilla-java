@@ -5,10 +5,10 @@ public class Airports {
 
     public static void main(String[] args) {
         Flight flight = new Flight("Krakow", "Poznan");
-        FindAirport findAirport = new FindAirport();
+        ArrivalAirport arrivalAirport = new ArrivalAirport();
 
         try{
-            boolean findFlight = findAirport.findFlight(flight);
+            boolean findFlight = arrivalAirport.findFlight(flight);
             if(findFlight){
                 System.out.println("We fly !!!");
             }else{
