@@ -1,4 +1,7 @@
-package com.kodilla.good.patterns.challenges.food2door;
+package com.kodilla.good.patterns.challenges.food2door.orders;
+
+import com.kodilla.good.patterns.challenges.food2door.Food;
+import com.kodilla.good.patterns.challenges.food2door.Producer;
 
 public class OrderRequestRetrieverGluten {
     public OrderRequest retrieve(){
