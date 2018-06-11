@@ -1,4 +1,6 @@
-package com.kodilla.good.patterns.challenges.food2door;
+package com.kodilla.good.patterns.challenges.food2door.orders;
+
+import com.kodilla.good.patterns.challenges.food2door.Producer;
 
 public class OrderDTO {
     private Producer producer;
@@ -13,7 +15,7 @@ public class OrderDTO {
         return producer;
     }
 
-    public boolean isIsOrdered() {
+    public boolean getIsOrdered() {
         return isOrdered;
     }
 }
