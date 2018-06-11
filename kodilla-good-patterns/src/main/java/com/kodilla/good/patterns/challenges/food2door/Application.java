@@ -1,5 +1,12 @@
 package com.kodilla.good.patterns.challenges.food2door;
 
+import com.kodilla.good.patterns.challenges.food2door.orders.OrderRequest;
+import com.kodilla.good.patterns.challenges.food2door.orders.OrderRequestRetrieverExtra;
+import com.kodilla.good.patterns.challenges.food2door.orders.OrderRequestRetrieverGluten;
+import com.kodilla.good.patterns.challenges.food2door.orders.OrderRequestRetrieverHealthy;
+import com.kodilla.good.patterns.challenges.food2door.repository.FoodOrderRepository;
+import com.kodilla.good.patterns.challenges.food2door.services.*;
+
 public class Application {
 
     public static void main(String[] args) {
