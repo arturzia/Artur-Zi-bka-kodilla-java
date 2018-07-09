@@ -2,20 +2,29 @@ package com.kodilla.hibernate.task;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+
 import java.time.Instant;
 import java.util.Date;
 import java.util.Objects;
+
 
 @Entity
 @Table(name = "TASKS")
 public final class Task {
     private int id;
     private String description;
-    private Instant created;
+
+    private Date created;
     private int duration;
 
+    public Task() {
+    }
 
-
+    public Task(String description, int duration) {
+        this.description = description;
+        this.created = new Date();
+        this.duration = duration;
+    }
 
     @Id
     @GeneratedValue
@@ -31,8 +40,10 @@ public final class Task {
     }
 
     @NotNull
-    @Column(name="CREATED")
-    public Instant getCreated() {
+
+    @Column(name="CREATED", columnDefinition = "TIMESTAMP (6)")
+    public Date getCreated() {
+
         return created;
     }
 
@@ -41,21 +52,24 @@ public final class Task {
         return duration;
     }
 
-    public void setId(int id) {
+
+    private void setId(int id) {
         this.id = id;
     }
 
-   public void setDescription(String description) {
+    private void setDescription(String description) {
         this.description = description;
     }
 
-    public void setCreated(Instant created) {
+    private void setCreated(Date created) {
         this.created = created;
     }
 
-    public void setDuration(int duration) {
+    private void setDuration(int duration) {
         this.duration = duration;
     }
+
+  
 
     @Override
     public boolean equals(Object o) {
@@ -73,4 +87,5 @@ public final class Task {
 
         return Objects.hash(id, description, created, duration);
     }
+
 }
