@@ -1,5 +1,6 @@
 .gradle
 /build/
+/out/
 !gradle/wrapper/gradle-wrapper.jar
 
 ### STS ###
@@ -24,3 +25,11 @@
 /dist/
 /nbdist/
 /.nb-gradle/
+/build/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+src/main/resources/
+src/test/resources/
+
